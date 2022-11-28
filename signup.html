@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css ">
+
+    <link rel="page" href="courses.html">
+    <link rel="page" href="courses.html">
+    <link rel="page" href="signup.html">
+
+    <style>
+        *{
+        font-family: 'Times New Roman', Times, serif;
+        }
+
+        nav{
+            height: 5rem;
+        }
+
+        .background{
+            height: 100%;
+            width: 100%;
+            position: fixed;
+        }
+        .fillout{
+            display: flex;
+            position: absolute;
+            flex-direction: column;
+            width: 25rem;
+            top: 32%;
+            left: 35%;
+            gap: .5rem;
+            background-color: rgba(116, 112, 112, 0.5);
+            border-radius: 1rem;
+            padding: 3rem;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .fillout{
+                width: 20rem;
+                left: 20%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><img src="logo.png" alt=""></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="courses.html">Courses</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="signup.html">Sign Up</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+      <img class="background" src="signup.jpg" alt="">
+
+      <form class="fillout"
+        method="post"
+        action="https://dev.itas.ca/~brandon.brown/processForm.php">
+        <h1>Sign up now!</h1>
+            <div class="input">
+              <input type="text" class="form-control" placeholder="First name" aria-label="First name" name="fname">
+            </div>
+            <div class="input">
+              <input type="text" class="form-control" placeholder="Last name" aria-label="Last name" name="lname">
+            </div>
+            <div class="input">
+            <input type="email" class="form-control" placeholder="Email" aria-label="Email" name="email">
+            </div>
+            <div class="input">
+            <input type="password" class="form-control" placeholder="Password" aria-label="Password" name="passwd">
+            </div>
+            </div>
+            <div class="signup">
+              <button type="submit" class="btn btn-primary">Sign up</button>
+            </div>
+        
+      </form>
+
+</body>
+</html>

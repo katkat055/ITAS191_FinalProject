@@ -38,10 +38,10 @@
             padding-top: 12rem;
         }
 
-        form{
+        .fill{
             margin: 3rem;
         }
-        form h1, input, textarea{
+        form h1, input, button, textarea{
             margin: 1rem;
         }
 
@@ -56,7 +56,7 @@
             height: 2rem;
         }
 
-        @media only screen and (max-width: 600px){
+        @media only screen and (max-width: 700px){
             .contactus{
                 flex-direction: column-reverse;
             }
@@ -111,21 +111,24 @@
             </ul>
           </div>
     
-            <form
+            <form class="fill"
             method="post"
             action="https://dev.itas.ca/~brandon.brown/processForm.php">
             <h1>How can we help you?</h1>
             <div class="input">
-                <input type="text" class="form-control" placeholder="First name" aria-label="First name" name="fname">
+                <input type="text" class="form-control" placeholder="First name" aria-label="First name" name="fname" required>
             </div>
             <div class="input">
-                <input type="text" class="form-control" placeholder="Last name" aria-label="Last name" name="lname">
+                <input type="text" class="form-control" placeholder="Last name" aria-label="Last name" name="lname" required>
             </div>
             <div class="input">
-                <input type="email" class="form-control" placeholder="Email" aria-label="Email" name="email">
+                <input type="email" class="form-control" placeholder="Email" aria-label="Email" name="email" required>
             </div>
             <div class="input">
-                <textarea name="comment" class="form-control" placeholder="Comments" aria-label="Comments" cols="30" rows="10"></textarea>
+                <textarea name="comment" class="form-control" placeholder="Comments" aria-label="Comments" cols="30" rows="10" required></textarea>
+            </div>
+            <div class="input">
+              <button type="submit" class="btn btn-primary">Submit</button>
             </div>
             </form>
       </div>

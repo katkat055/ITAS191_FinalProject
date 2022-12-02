@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css">
+    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css ">
 
@@ -38,7 +38,7 @@
         .contactinfo{
             background-image: url("contactbkg.jpg");
             width: 50vw;
-            height: 100;
+            height: 120vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -61,6 +61,14 @@
         .socials i{
             width: 2rem;
             height: 2rem;
+        }
+
+        .dark-mode {
+        background-color: black;
+        }
+
+        .dark-mode .question{
+            color: white;
         }
 
         @media only screen and (max-width: 700px){
@@ -95,10 +103,7 @@
                 <a class="nav-link" href="signup.html">Sign Up</a>
               </li>
             </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+            <button onclick="myFunction()">Mode <i class="bi bi-brightness-alt-high" id="mode"></i></button>
           </div>
         </div>
       </nav>
@@ -121,7 +126,7 @@
             <form class="fill"
             method="post"
             action="https://dev.itas.ca/~brandon.brown/processForm.php">
-            <h1>How can we help you?</h1>
+            <h1 class="question">How can we help you?</h1>
             <div class="input">
                 <input type="text" class="form-control" placeholder="First name" aria-label="First name" name="fname" required>
             </div>
@@ -139,5 +144,12 @@
             </div>
             </form>
       </div>
+
+      <script>
+        function myFunction() {
+           var element = document.body;
+           element.classList.toggle("dark-mode");
+        }
+        </script>
 </body>
 </html>
